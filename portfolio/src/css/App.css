@@ -1,0 +1,216 @@
+#root {
+  max-width: 100vw;
+  min-width: 100vw;
+  padding: 3rem;
+  text-align: center;
+  background-color: #fbf8cc;
+  color: #03045E;
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+}
+
+.app{
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
+/* NAVBAR STYLING */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.navbar-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-center .nav-links{
+  list-style-type: none;
+  display: flex;
+  margin:0;
+  padding: 0;
+}
+
+.navbar-center .nav-links li {
+  margin-right: 3rem;
+}
+
+.navbar-center .nav-links a{
+  text-decoration: none;
+  font-size: small;
+  color: #03045E;
+}
+
+svg{
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 1em;
+}
+
+/* HERO STYLING */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.hero-left{
+  text-align: left;
+}
+
+.hero-left h1{
+  font-size: 6em;
+  font-weight: 800;
+  padding-left: 0;
+}
+
+.hero-left p {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.hero img{
+  max-width: 100%;
+  height: auto;
+}
+
+.stacked-button {
+  position: relative;
+  display: inline-block;
+  height: 4em;
+  width: 10em;
+  margin-top: 2em;
+}
+
+.stacked-button button {
+  height: 3em;
+  width: 8em;
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.top-button{
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  outline: #474306 1px solid;
+  /* color: white; */
+  z-index: 2;
+}
+
+.bottom-button{
+  top: 7px;
+  left: 6px;
+  background-color: #F5EE84;
+  /* color: white; */
+  z-index: 1;
+}
+
+/* ABOUT STYLING */
+.about {
+  text-align: left;
+  margin-bottom: 4em;
+}
+
+.about h1{
+  color: #F7F197;
+  font-size: 6em;
+  font-weight: 800;
+}
+
+/* WORK STYLING */
+.work {
+  text-align: left;
+  margin-bottom: 4em;
+}
+
+.work h1{
+  color: #F7F197;
+  font-size: 6em;
+  font-weight: 800;
+}
+
+.projects{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CONTACT STYLING */
+.contact h1{
+  text-align: left;
+  color: #F7F197;
+  font-size: 6em;
+  font-weight: 800;
+}
+
+.contact h5{
+  margin-bottom: 3.5em;
+}
+
+.contact-form{
+  margin-top: 20px;
+  /* max-width: 100%; */
+}
+
+.flex-area{
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 23px;
+}
+
+.contact-form label{
+  margin: 5px 0;
+  text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-bottom: 2px solid #03045E;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #03045E;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #03045E;
+}
+
+.form-group{
+  flex: 1;
+  min-width: 49%;
+}
+
+.form-group-full{
+  flex: 2;
+}
+
+.form-group, .form-group-full{
+  text-align:left
+}
+
+
