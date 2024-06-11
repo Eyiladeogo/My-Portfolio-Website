@@ -5,6 +5,7 @@ import Hero from './Hero'
 import About from './About'
 import Work from './Work'
 import Contact from './Contact'
+import Footer from './Footer'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <About/>
       <Work/>
       <Contact/>
+      <Footer/>
     </>
   )
 }
