@@ -1,11 +1,11 @@
 export default function Contact(){
     return (
-        <section className="contact">
+        <section className="contact" id="contact">
             <h1>contact.</h1>
             <h3>Send me a message!</h3>
             <h5>Have a question, proposal, or just want to say hi? Feel free to reach out!</h5>
             <div className="contact-form">
-                <form action="https://formspree.io/f/" method="POST">
+                <form action="https://formspree.io/f/mayrroyv" method="POST">
                     <div className="flex-area">
                         <div className="form-group">
                             <label htmlFor="name">Your Name </label>

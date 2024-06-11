@@ -80,8 +80,8 @@ svg{
 .stacked-button {
   position: relative;
   display: inline-block;
-  height: 4em;
-  width: 10em;
+  height: 3.5em;
+  width: 8.5em;
   margin-top: 2em;
 }
 
@@ -137,8 +137,14 @@ svg{
   font-weight: 800;
 }
 
+/* .work-explanation{
+  flex: 1;
+} */
+
 .projects{
   display: flex;
+  /* gap: 0.3em; */
+  align-items: center;
   justify-content: space-between;
 }
 
