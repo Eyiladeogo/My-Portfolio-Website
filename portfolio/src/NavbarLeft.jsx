@@ -37,7 +37,7 @@ function TypingEffect({ texts, typingSpeed, deletingSpeed, delay }) {
 }
 
 export default function NavbarLeft() {
-  const texts = ["Eyiladeogo", "Adedayo"];
+  const texts = ["EYILADEOGO", "ADEDAYO"];
   const typingSpeed = 150;
   const deletingSpeed = 100;
   const delay = 2000;
