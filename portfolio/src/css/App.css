@@ -49,8 +49,34 @@ section>h1.shadow:hover {
 }
 
 .navbar-left {
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #000; /* Cursor effect */
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
 
 .navbar-center .nav-links{

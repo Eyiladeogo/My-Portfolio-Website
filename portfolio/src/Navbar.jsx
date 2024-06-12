@@ -2,14 +2,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './css/App.css'
+import NavbarLeft from './NavbarLeft';
 
 
 
 export default function Navbar(){
     return (
         <nav className="navbar">
-            <div className='navbar-left'>
-                    Eyiladeogo
+            <div className='navbar-left' id='navbar-left'>
+                    <NavbarLeft/>
             </div>
             <div className='navbar-center'>
                 <ul className='nav-links'>
