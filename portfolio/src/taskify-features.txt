@@ -1,0 +1,53 @@
+Key Features:
+
+User Authentication: Secure user registration and login functionality using JWT for token-based authentication.
+Task Management: Users can create, update, and delete tasks. Each task includes details like name, duration, due date, and priority.
+Task Filtering: Easily switch between viewing pending and completed tasks with a simple toggle.
+Responsive Design: Optimized for both desktop and mobile devices, ensuring a consistent experience across different screen sizes.
+Modals for Task Details: Clean and user-friendly modals for adding and editing tasks, ensuring a smooth user interaction.
+Tech Stack:
+
+Frontend: React for building interactive UI components and managing application state. CSS for styling and ensuring responsive design.
+Backend: Node.js and Express for creating RESTful APIs. JWT for handling user authentication securely.
+Database: MySQL for managing and storing user and task data.
+Axios: For making HTTP requests from the frontend to the backend API.
+Challenges and Learning Outcomes:
+
+Working on Taskify has been an incredible learning experience. I faced and overcame several challenges, such as implementing secure authentication, ensuring seamless data flow between frontend and backend, and optimizing the application for performance. This project enhanced my understanding of full-stack development and improved my skills in building scalable web applications.
+
+Future Enhancements:
+
+Offline Mode: Implementing offline functionality so users can manage tasks without an internet connection.
+Notifications: Adding reminders and notifications for upcoming due tasks.
+Collaboration: Enabling task sharing and collaboration among multiple users.
+Demo and Source Code:
+
+Live Demo: Taskify Demo (Link to the live demo)
+GitHub Repository: Taskify GitHub (Link to the GitHub repo)
+
+
+
+
+
+
+.work-explanation > img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.work-explanation > p {
+  color: #03045E; /* Keeping this as the base color */
+  font-size: 1em;
+  margin: 10px 0;
+  text-align: left; /* Ensuring text alignment is consistent */
+}
+
+.work-explanation > p:first-of-type {
+  font-weight: bold; /* Bold for the project name */
+  font-size: 1.2em; /* Slightly larger for emphasis */
+}
+
+.work-explanation > p:last-of-type {
+  font-style: italic; /* Italics for the description */
+  font-size: 0.9em; /* Slightly smaller for a softer touch */}

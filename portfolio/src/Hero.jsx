@@ -18,7 +18,7 @@ export default function Hero(){
                     </a>
                 </div>
                 <div className="hero-right">
-                    <img src="https://picsum.photos/500/400"></img>
+                    <img src="src/assets/Eyiladeogo.jpg"></img>
                 </div>
             </section>
         </>
