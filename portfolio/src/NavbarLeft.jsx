@@ -1,47 +1,50 @@
 import React, { useEffect, useState } from "react";
 
-function TypingEffect({ text, speed }) {
+function TypingEffect({ texts, typingSpeed, deletingSpeed, delay }) {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [blink, setBlink] = useState(true);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
   useEffect(() => {
-    if (index < text.length) {
-      const timeoutId = setTimeout(() => {
-        setDisplayedText(displayedText + text[index]);
-        setIndex(index + 1);
-      }, speed);
-      return () => clearTimeout(timeoutId);
+    if (subIndex === texts[currentTextIndex].length + 1 && !isDeleting) {
+      setTimeout(() => setIsDeleting(true), delay);
+    } else if (subIndex === 0 && isDeleting) {
+      setIsDeleting(false);
+      setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+    } else {
+      const timeout = setTimeout(() => {
+        setDisplayedText(texts[currentTextIndex].substring(0, subIndex));
+        setSubIndex((prev) => prev + (isDeleting ? -1 : 1));
+      }, isDeleting ? deletingSpeed : typingSpeed);
+      return () => clearTimeout(timeout);
     }
-  }, [displayedText, index, text, speed]);
+  }, [subIndex, isDeleting, currentTextIndex, texts, typingSpeed, deletingSpeed, delay]);
 
-  return <span>{displayedText}</span>;
+  useEffect(() => {
+    const blinkTimeout = setTimeout(() => setBlink((prev) => !prev), 500);
+    return () => clearTimeout(blinkTimeout);
+  }, [blink]);
+
+  return (
+    <span>
+      {displayedText}
+      <span style={{ borderRight: `0.1em solid ${blink ? "black" : "transparent"}` }}></span>
+    </span>
+  );
 }
 
 export default function NavbarLeft() {
-  const texts = ["EYILADEOGO", "ADEDAYO"];
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
-
-  useEffect(() => {
-    const changeText = () => {
-      setIsTyping(false);
-      setTimeout(() => {
-        setCurrentTextIndex((currentTextIndex + 1) % texts.length);
-        setDisplayedText("");
-        setIndex(0);
-        setIsTyping(true);
-      }, 2000); // Change text every 2 seconds
-    };
-
-    if (isTyping) {
-      const timeoutId = setTimeout(changeText, texts[currentTextIndex].length * 100 + 2000); // Typing speed * text length + delay
-      return () => clearTimeout(timeoutId);
-    }
-  }, [isTyping, currentTextIndex]);
+  const texts = ["Eyiladeogo", "Adedayo"];
+  const typingSpeed = 150;
+  const deletingSpeed = 100;
+  const delay = 2000;
 
   return (
     <div className="navbar-left">
-      {isTyping && <TypingEffect text={texts[currentTextIndex]} speed={100} />}
+      <TypingEffect texts={texts} typingSpeed={typingSpeed} deletingSpeed={deletingSpeed} delay={delay} />
     </div>
   );
 }
