@@ -20,7 +20,7 @@ section > h1{
   transition: all 0.3s ease;
 }
 
-section > h1:hover::after {
+/* section > h1:hover::after {
   width: 100%;
 }
 
@@ -37,7 +37,7 @@ section>h1.scale:hover {
 section>h1.shadow:hover {
   color: #023e8a;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
+} */
 
 
 /* NAVBAR STYLING */
@@ -46,6 +46,10 @@ section>h1.shadow:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+}
+
+nav .navbar{
+  margin-bottom: 2rem;
 }
 
 .navbar-left {
@@ -107,6 +111,7 @@ svg{
   display: flex;
   justify-content: space-between;
   margin-bottom: 4em;
+  padding-top: 2em ;
 }
 
 .hero-left{
@@ -266,8 +271,9 @@ svg{
 
 .live{
   position: absolute;
-  top: 60px;
-  right: 10px
+  top: 10%;
+  /* top: 60px;
+  right: 10px */
 }
 
 .modal-buttons{
@@ -294,6 +300,11 @@ svg{
   transition: 0.3s ease;
 }
 
+.about p{
+  width: 70%;
+  text-align: justify;
+}
+
 /* WORK STYLING */
 .work {
   text-align: left;
@@ -305,6 +316,13 @@ svg{
   font-size: 6em;
   font-weight: 800;
   transition: all 0.3s ease;
+}
+
+
+.work > p{
+  width: 80%;
+  text-align: justify;
+
 }
 
 
@@ -379,7 +397,7 @@ svg{
 }
 
 .contact-form input, .contact-form textarea {
-  padding: 10px;
+  padding: 10px 0px;
   margin-bottom: 10px;
   border: none;
   border-bottom: 2px solid #ccc;
@@ -387,6 +405,7 @@ svg{
   outline: none;
   width: 100%;
   text-align: left;
+  height: auto;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
@@ -439,3 +458,144 @@ footer{
 footer:hover {
   color: #535bf2;
 }
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 3em;
+  }
+
+  .work h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+
+  .work-p-wrapper{
+    display: block;
+    text-align: justify;
+  }
+
+  .work > p{
+    width: 100%;
+    text-align: justify;
+  }
+  
+
+  .about h1 {
+    font-size: 3em;
+  }
+
+  .about p{
+    width: 100%;
+    text-align: justify;
+  }
+
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero h1{
+    font-size: 3em;
+  }
+
+  .hero img {
+      max-width: 100%;
+      margin-top: 1rem;
+  }
+
+  
+}
+
+  .projects {
+      flex-direction: column;
+  }
+
+  .project-card {
+      margin-bottom: 1rem;
+  }
+
+
+
+
+
+  @media (min-width: 768px) and (max-width:1023px) {
+    .contact h1 {
+      font-size: 4.5em;
+    }
+  
+    .work h1 {
+      font-size: 4.5em;
+      text-align: left;
+    }
+  
+    .work-p-wrapper{
+      display: block;
+      text-align: justify;
+    }
+  
+    .work > p{
+      width: 80%;
+      text-align: justify;
+    }
+    
+  
+    .about h1 {
+      font-size: 4.5em;
+    }
+  
+    .about p{
+      width: 70%;
+      text-align: justify;
+    }
+  
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .hero h1{
+      font-size: 3em;
+    }
+  
+    .hero img {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+  
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: -200px;
+      height: 100%;
+      background-color: #03045E;
+      transition: left 0.3s ease;
+    }
+  
+    .navbar-links a {
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+  
+     .menu-toggle {
+      display: block;
+    }
+  }
+  
+  .navbar-links.active {
+    left: 0;
+  }
+  
+    .projects {
+        flex-direction: column;
+    }
+  
+    .project-card {
+        margin-bottom: 1rem;
+    }
+  

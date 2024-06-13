@@ -17,7 +17,7 @@ export default function Contact(){
                         </div>
                         <div className="form-group-full">
                         <label htmlFor="message">Message: </label>
-                        <textarea name="message" id="message" placeholder="Tell me all about your next project!! 🛠️"></textarea>
+                        <textarea name="message" id="message"></textarea>
                         </div>
                     </div>
                     

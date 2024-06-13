@@ -43,8 +43,8 @@ export default function NavbarLeft() {
   const delay = 2000;
 
   return (
-    <div className="navbar-left">
+    
       <TypingEffect texts={texts} typingSpeed={typingSpeed} deletingSpeed={deletingSpeed} delay={delay} />
-    </div>
+    
   );
 }
