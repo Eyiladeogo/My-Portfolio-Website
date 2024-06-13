@@ -83,7 +83,7 @@ nav .navbar{
   }
 }
 
-.navbar-center .nav-links{
+/* .navbar-center .nav-links{
   list-style-type: none;
   display: flex;
   margin:0;
@@ -98,6 +98,23 @@ nav .navbar{
   text-decoration: none;
   font-size: small;
   color: #03045E;
+} */
+
+.nav-item{
+  text-decoration: none;
+  font-size: small;
+  font-weight: bolder;
+  color: #03045E;
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.nav-link a{
+  color: #03045E;
+  
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%283, 4, 94, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom toggle icon color */
 }
 
 svg{
@@ -439,6 +456,10 @@ svg{
   text-align:left
 }
 
+.contact-icons{
+  margin-bottom: 2em;
+}
+
 /* FOOTER STYLING */
 footer{
   font-weight: 500;
@@ -564,6 +585,10 @@ footer:hover {
         max-width: 100%;
         margin-top: 1rem;
     }
+
+    .navbar-left > span{
+      font-size: smaller;
+    }
   
     .navbar-links {
       display: none;
@@ -599,3 +624,31 @@ footer:hover {
         margin-bottom: 1rem;
     }
   
+
+@media (max-width:320px) {
+  .navbar-left > span{
+    font-size: x-small;
+  }
+
+  .hero{
+    font-size: smaller;
+  }
+
+  .about{
+    font-size: smaller;
+  }
+
+  .work{
+    font-size: smaller;
+  }
+
+  .contact{
+    font-size: smaller;
+  }
+}
+
+@media (min-width:240px) and (max-width:319px) {
+  .hero h1{
+    font-size: smaller;
+  }
+}
