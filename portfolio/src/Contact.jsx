@@ -7,7 +7,7 @@ export default function Contact(){
             <div className="contact-form">
                 <form action="https://formspree.io/f/mayrroyv" method="POST">
                     <div className="flex-area">
-                        <div className="form-group">
+                        <div className="form-group-full">
                             <label htmlFor="name">Your Name </label>
                             <input type="text" name="name" id="name" placeholder="Enter your Name"/>
                         </div>
@@ -15,9 +15,9 @@ export default function Contact(){
                             <label htmlFor="email">Your Email </label>
                             <input type="email" name="email" id="email" placeholder="Enter your Email"/>
                         </div>
-                        <div className="form-group-full">
-                        <label htmlFor="message">Message: </label>
-                        <textarea name="message" id="message"></textarea>
+                        <div className="form-group">
+                            <label htmlFor="message">Message: </label>
+                            <textarea name="message" id="message" placeholder="Tell me all about your next project!🛠️"></textarea>
                         </div>
                     </div>
                     
