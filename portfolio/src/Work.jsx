@@ -182,7 +182,7 @@ export default function Work() {
                 </span>
               </h3>
             </h2>
-            <p>{fluxDescription}</p>
+            <p>{bounceDescription}</p>
             <h3>Features</h3>
             <ul>
               <li>
